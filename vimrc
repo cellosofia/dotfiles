@@ -52,8 +52,8 @@ nnoremap <C-H> <C-W><C-H>
 set nobackup
 
 "Especifico para ansible"
-autocmd FileType yaml setlocal ai ts=2 sw=2 et
-autocmd FileType yml setlocal ai ts=2 sw=2 et
+autocmd FileType yaml setlocal ai ts=2 sw=2 sts=2 et
+autocmd FileType yml setlocal ai ts=2 sw=2 sts=2 et
 
 "Auto closing"
 inoremap " ""<left>
@@ -62,3 +62,5 @@ inoremap ( ()<left>
 inoremap [ []<left>
 inoremap { {}<left>
 inoremap < <><left>
+
+set cuc cul
