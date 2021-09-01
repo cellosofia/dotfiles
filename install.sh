@@ -1,7 +1,6 @@
 #!/bin/bash
 
-#cat bashrc >> ~/.bashrc
-sudo cp bashrc /etc/profile.d/custom.sh
+cat bashrc >> ~/.bashrc
 cp tmux.conf ~/.tmux.conf
 cp vimrc ~/.vimrc
 
