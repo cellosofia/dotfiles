@@ -1,25 +1,25 @@
 # Readme: modo de uso 
 
-clonar el repo
+Clonar el repo
 
 `git clone https://github.com/cellosofia/dotfiles`
 
-acceder al directorio clonado
+Acceder al directorio clonado
 
 `cd dotfiles`
 
-analizar si estamos sobre el8 o el9
+Analizar si estamos sobre el8 o el9
 
 `cat /etc/redhat-release`
 
-ejecutar el script con sudo. Ejemplo:
+Ejecutar el script con sudo. Para instalar a nivel sistema operativo. Ejemplo:
 
 `sudo ./install-el8.sh`
 
-ejecutar el script para el usuario local:
+Ajecutar nuevamente el script para el usuario local:
 
 `./install-el8.sh`
 
-cargar el bashrc nuevamente
+Cargar el bashrc nuevamente con el usuario local
 
 `source ~/.bashrc`
