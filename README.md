@@ -1,4 +1,4 @@
-modo de uso 
+# Readme: modo de uso 
 
 clonar el repo
 
