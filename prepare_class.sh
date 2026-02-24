@@ -1,18 +1,22 @@
 #!/bin/bash
+set -euo pipefail
 
 source /etc/os-release
 
 VERSION="x"
 
-if [ "$VERSION_ID" =~ "^8.*" ]; then
+if [[ "${VERSION_ID}" =~ "^8.*" ]]; then
     VERSION="8"
-    dnf install -y gnome-tweaks
-elif [ "$VERSION_ID" =~ "^9.*" ]; then
+    sudo dnf install -y gnome-tweaks
+elif [[ "${VERSION_ID}" =~ "^9.*" ]]; then
     VERSION="9"
-    dnf install -y gnome-tweaks gnome-extensions-app
-elif [ "$VERSION_ID" =~ "^10.*" ]; then
+    sudo dnf install -y gnome-tweaks gnome-extensions-app
+elif [[ "${VERSION_ID}" =~ "^10.*" ]]; then
     VERSION="10"
-    dnf install -y gnome-tweaks gnome-extensions-app
+    sudo dnf install -y gnome-tweaks gnome-extensions-app
+else
+    echo "Unsupported version: ${VERSION_ID}"
+    exit 1
 fi
 
 if [ "$VERSION" != "x" ]; then
