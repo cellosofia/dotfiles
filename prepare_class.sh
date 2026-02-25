@@ -11,9 +11,15 @@ if [[ "${VERSION_ID}" =~ ^8 ]]; then
 elif [[ "${VERSION_ID}" =~ ^9 ]]; then
     VERSION="9"
     sudo dnf install -y gnome-tweaks gnome-extensions-app
-elif [[ "${VERSION_ID}" =~ "^10" ]]; then
+elif [[ "${VERSION_ID}" =~ ^10 ]]; then
     VERSION="10"
-    sudo dnf install -y gnome-tweaks gnome-extensions-app
+    sudo dnf install -y gnome-extensions-app
+    mkdir -p ~/git
+    pushd ~/git
+    git clone https://github.com/powerline/fonts.git
+    cd fonts
+    ./install.sh
+    popd
 else
     echo "Unsupported version: ${VERSION_ID}"
     exit 1
